@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docker Compose Lint</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/monaco-editor@0.45.0/min/vs/editor/editor.main.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Docker Compose Linter</h1>
+      <p>
+        Paste your <b>docker-compose.yml</b> code below and click <b>Lint</b> to check for errors
+        and best practices.
+      </p>
+      <div id="monaco-editor"></div>
+      <div id="monaco-editor-resize"></div>
+      <button id="lintBtn">Lint</button>
+      <button id="fixBtn" style="margin-left: 8px">Fix Issues</button>
+      <button id="copyAllBtn" style="margin-left: 8px">Copy All</button>
+      <button id="clearBtn" style="margin-left: 8px">Clear</button>
+      <div id="results" class="results" style="display: none"></div>
+    </div>
+    <footer class="footer">
+      <span>
+        Powered by <a href="https://github.com/dundee/dclint" target="_blank">dclint</a>,
+        <a href="https://microsoft.github.io/monaco-editor/" target="_blank">Monaco Editor</a>, and
+        <a href="https://expressjs.com/" target="_blank">Express</a>.
+      </span>
+    </footer>
+    <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
